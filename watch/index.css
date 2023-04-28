@@ -19,10 +19,10 @@ ol, ul {
   
 body {
     font-family: 'League Spartan', sans-serif;
+    width: 1440px;
 }
 .header-container {
     display: flex;
-    width: 1440px;
     padding-left: 133px;
     padding-top: 84px;
     padding-right: 133px;
