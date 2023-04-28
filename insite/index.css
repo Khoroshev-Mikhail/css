@@ -37,43 +37,51 @@ body{
 }
 @media all and (min-width: 1100px){
     .container{
-        padding: 0px 20px 0px 20px;
-        width: 1100px;
+        max-width: 1100px;
         margin: 0px auto;
     }
 }
 .panel{
-    height: 80px;
+    height: 56px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    position: relative;
-}
-.panel::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 80px;
-    background: #000000;
+    line-height: 56px;
+    border-bottom: 2px solid #000000;
 }
 .panel a {
     color: #000000;
     text-decoration: none;
 }
-@media all and (min-width: 768px){
-
+@media all and (min-width: 415px){
+    .panel{
+        
+    }
 }
-@media all and (min-width: 1100px){
+@media all and (min-width: 768px){
     .panel{
         height: 56px;
     }
+}
+.panel-lang{
+    width: 30%;
 }
 .panel-lang a{
     font-family: 'IBM Plex Mono';
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+}
+.panel-logo{
+    width: 20%;
+}
+@media all and (min-width: 768px){
+    .panel-lang{
+        width: 40%;
+    }
+    .panel-logo{
+        width: 10%;
+    }
 }
 .panel-logo-button{
     position: relative;
@@ -86,15 +94,31 @@ body{
 }
 .panel-logo-button-round{
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 21px;
     position: absolute;
-    left: -16px;
-    top: 5px;
+    left: -21px;
+    top: 3px;
     background-color: #161616;
 }
-.panel-links-nav {
+.panel-links{
+    width: 50%;
+    text-align: right;
+}
+.panel-links-nav a:nth-child(2) {
+    margin-right: 10px;
+}
+.panel-links-nav a:nth-child(1) {
+    margin-right: 10px;
+}
 
+@media all and (min-width: 1100px){
+    .panel-links-nav a:nth-child(2) {
+        margin-right: 40px;
+    }
+    .panel-links-nav a:nth-child(1) {
+        margin-right: 40px;
+    }
 }
 .panel-links-nav a{
     font-family: 'IBM Plex Mono';
@@ -105,24 +129,218 @@ body{
 }
 
 
+
+.header{
+    height: 455px;
+    padding-left: 400px;
+    padding-top: 110px;
+    position: relative;
+}
 .lighting{
     position: absolute;
     top: 0px;
     width: 272px;
     left: -32px;
-    top: -31px;
+    top: -56px;
 }
-@media handheld and (min-width: 768px){
-    .lighting{
-        width: 272px;
-        left: 0px;
-        top: 0px;
-    }
-}
-@media screen and (min-width: 1100px){
+@media (min-width: 414px){
     .lighting{
         width: 400px;
         left: 0px;
-        top: 0px;
+        top: -56px;
     }
+}
+@media (min-width: 768px){
+    .lighting{
+        width: 400px;
+        left: -40px;
+        top: -56px;
+    }
+}
+.header-subtitle{
+    font-family: 'IBM Plex Mono';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+    mix-blend-mode: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-title{
+    font-family: 'IBM Plex Mono';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    display: inline;
+    color: #000000;
+    mix-blend-mode: normal;
+    background-color: red;
+    position: relative;
+    padding: 0px 5px 20px 5px;
+}
+
+.header-title-span{
+    position: absolute;
+    background-color: red;
+    width: 500px;
+    top: 60px;
+    left: 105px;
+    text-align: center;
+    padding: 0px 5px 20px 5px;
+}
+@media (min-width: 414px){
+    .header{
+        padding-left: 300px;
+    }
+    .header-title{
+        font-size: 30px;
+    }
+    .header-title-span{
+        width: 400px;
+    }
+    .header-subtitle{
+        font-size: 30px;
+    }
+}
+@media (min-width: 768px){
+    .header{
+        padding-left: 340px;
+    }
+    .header-title{
+        font-size: 36px;
+    }
+    .header-title-span{
+        width: 400px;
+    }
+    .header-subtitle{
+        font-size: 36px;
+    }
+}
+.sub-title-wrapper{
+    width: 300px;
+}
+.sub-title{
+    font-family: 'Gosha Sans';
+    width: 100%;
+    font-size: 64px;
+    line-height: 32px;
+    color: #000000;
+    mix-blend-mode: normal;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5%;
+}
+.about-desc{
+    width: 300px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.services_item{
+    width: 300px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.services_item_title{
+    font-family: 'Gosha Sans';
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+    mix-blend-mode: normal;
+    padding-bottom: 16px;
+}
+
+
+
+.portfolio{
+    margin-top: 200px;
+}
+.portfolio_list{
+    padding-top: 30px;
+}
+.portfolio_list_li{
+    margin-left: 400px;
+    position: relative;
+    border-bottom: 2px solid #000000;
+    padding: 16px 0px;
+    margin-top: 80px;
+}
+.portfolio_list_li_decorator{
+    position: absolute;
+    mix-blend-mode: multiply;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 160px;
+    line-height: 160px;
+    left: -150px;
+    top: -10px;
+    color: #fff;
+    text-shadow: 1px 0 1px #D6D6D6, 
+    0 1px 1px #D6D6D6, 
+    -1px 0 1px #D6D6D6, 
+    0 -1px 1px #D6D6D6;
+}
+.portfolio_list_li_title{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    mix-blend-mode: normal;
+    word-spacing: 40px;
+}
+.portfolio_list_li_link{
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 73px;
+    text-decoration: none;
+    color: #000000;
+    mix-blend-mode: normal;
+}
+
+.feedback{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+.feedback-sub-title-wrapper{
+    width: 50%;
+}
+.feedback-contacts{
+    width: 30%;
+}
+.feedback-contacts a{
+    display: block;
+    padding-bottom: 10px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    text-decoration: none;
+
+
+    color: #000000;
 }
